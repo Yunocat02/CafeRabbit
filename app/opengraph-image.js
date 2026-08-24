@@ -2,6 +2,8 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
+/* eslint-disable @next/next/no-img-element -- ImageResponse requires a plain image element. */
+
 export const alt = "The Rabbit Cafe: a quiet creative space";
 export const size = {
   width: 1200,

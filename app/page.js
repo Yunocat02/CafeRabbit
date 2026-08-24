@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const principles = [
   {
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <div className="site-shell" id="top">
       <header className="site-header">
-        <a className="brand" href="/" aria-label="The Rabbit Cafe home">
+        <Link className="brand" href="/" aria-label="The Rabbit Cafe home">
           <Image
             className="brand-logo"
             src="/Logo_main2.png"
@@ -32,7 +33,7 @@ export default function Home() {
             priority
           />
           <span>The Rabbit Cafe</span>
-        </a>
+        </Link>
 
         <nav className="site-nav" aria-label="Main navigation">
           <a href="#about">About</a>
@@ -143,7 +144,12 @@ export default function Home() {
           />
           <p>© {new Date().getFullYear()} The Rabbit Cafe</p>
         </div>
-        <p>Official website · caferabbit.com</p>
+        <div className="footer-meta">
+          <p>Official website · caferabbit.com</p>
+          <Link className="footer-privacy" href="/privacy">
+            Privacy
+          </Link>
+        </div>
       </footer>
     </div>
   );
